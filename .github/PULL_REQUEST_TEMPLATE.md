@@ -1,18 +1,18 @@
-# Выполнено ДЗ №
+# Completed Homework №
 
- - [ ] Основное ДЗ
- - [ ] Задание со *
+ - [ ] Main task
+ - [ ] Extras
 
-## В процессе сделано:
- - Пункт 1
- - Пункт 2
+## The following tasks have been completed:
+ - Task 1
+ - Task 2
 
-## Как запустить проект:
- - Например, запустить команду X в директории Y
+## How to get project running:
+ - For example, run command X in folder Y
 
-## Как проверить работоспособность:
- - Например, перейти по ссылке http://localhost:8080
+## How to check that project actually works:
+ - For example, type URL in browser address bar http://localhost:8080
 
 ## PR checklisk
- - [ ] Выставил label с номером домашнего задания
- - [ ] Выставил label с темой домашнего задания
+ - [ ] Added label with homework number
+ - [ ] Added label with homework subject
