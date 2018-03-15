@@ -1,16 +1,29 @@
 # ifqthenp_infra
 
-### SSH alias for Homework 4
+## Homework 4. GCP Infrastructure.
+### SSH aliases
 Use this configuration in your `~/.ssh/config` file to gain SSH access
 to an inner private network via `bastion` public host.
 ```
 Host bastion
-	Hostname <bastion_host_name>
-	User <username1>
+	Hostname 35.230.132.206
+	User appuser
 	ForwardAgent yes
 Host someinternalhost
-	Hostname <private_host_name>
-	User <username1>
+	Hostname 10.154.0.3
+	User appuser
 	ProxyCommand ssh -qxT bastion nc %h %p
 ```
 Alternative solution: `ProxyCommand ssh -W %h:%p bastion`
+
+### Connection configuration
+bastion_IP = 35.230.132.206
+someinternalhost_IP = 10.154.0.3
+
+To check  OpenVPN server connection:
+```
+$ sudo apt-get install openvpn
+$ sudo openvpn --config /path/to/config.ovpn
+$ ssh -i ~/.ssh/appuser appuser@< inner private network IP >
+```
+
