@@ -35,6 +35,11 @@ ssh -i ~/.ssh/appuser appuser@< inner private network IP >
 
 ## Homework 5. Testapp deploy to GCP
 
+### Testapp connection config
+
+testapp_IP = 35.197.215.51
+testapp_port = 9292
+
 ### GCP startup script
 
 Use this script to automate application deployment to GCP using a [local startup script file][1] and [gcloud][2] command-line tool.
