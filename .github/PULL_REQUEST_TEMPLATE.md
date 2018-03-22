@@ -1,7 +1,7 @@
 # Completed Homework №
 
-- [ ] Main task
-- [ ] Extras
+:large_blue_diamond: [ ] Main tasks
+:large_orange_diamond: [ ] Extra tasks for self-study
 
 ## The following tasks have been completed
 
@@ -14,6 +14,9 @@
 
 ## How to check that project actually works
 
+- Ensure that the build passed TravisCI tests
+  - [#andrei_bogomja](https://devops-team-otus.slack.com/messages/C9M6L1XB3) Slack channel
+  - actual GitHub pull request page
 - For example, type URL in browser address bar `http://localhost:8080`
 
 ## PR checklisk
