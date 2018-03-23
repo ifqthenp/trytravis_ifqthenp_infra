@@ -2,13 +2,19 @@
     "builders": [
         {
             "type": "googlecompute",
-            "project_id": "inductive-actor-198011",
+            "project_id": "{{user `project_id`}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
-            "source_image_family": "ubuntu-1604-lts",
-            "zone": "europe-west1-b",
+            "source_image_family": "{{user `source_image_family`}}",
+            "region": "europe-west2",
+            "zone": "europe-west2-a",
             "ssh_username": "appuser",
-            "machine_type": "f1-micro"
+            "machine_type": "{{user `machine_type`}}",
+            "disk_type": "{{user `disk_type`}}",
+            "disk_size": "{{user `disk_size`}}",
+            "network": "{{user `network`}}",
+            "tags": "{{user `tags`}}",
+            "image_description": "{{user `image_description`}}"
         }
     ],
     "provisioners": [
