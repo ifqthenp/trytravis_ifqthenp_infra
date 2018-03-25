@@ -7,6 +7,8 @@
 | :pushpin: | Useful information |
 | :checkered_flag: | Homework delimeter |
 
+## :checkered_flag: Homework 4. GCP Infrastructure
+
 ### SSH aliases
 
 Use this configuration in your `~/.ssh/config` file to gain SSH access
@@ -38,7 +40,7 @@ sudo openvpn --config /path/to/config.ovpn
 ssh -i ~/.ssh/appuser appuser@< inner private network IP >
 ```
 
-## Homework 5. Testapp deploy to GCP
+## :checkered_flag: Homework 5. Testapp deploy to GCP
 
 ### Testapp connection config
 
@@ -96,7 +98,7 @@ gcloud compute firewall-rules delete default-puma-server
 [4]: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/create
 [5]: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/delete
 
-## Homework 6. Creating GCP VM instances with HashiCorp Packer
+## :checkered_flag: Homework 6. Creating GCP VM instances with HashiCorp Packer
 
 ### Completed tasks
 
