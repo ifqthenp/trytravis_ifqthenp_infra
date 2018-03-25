@@ -1,0 +1,15 @@
+[Unit]
+Description=Puma HTTP Server for Reddit app
+Requires=mongod.service
+After=network.target mongod.service
+Documentation=https://github.com/puma/puma/blob/master/docs/systemd.md
+
+[Service]
+Type=simple
+User=appuser
+WorkingDirectory=/home/appuser/reddit
+ExecStart=/usr/local/bin/puma -b tcp://0.0.0.0:9292
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
