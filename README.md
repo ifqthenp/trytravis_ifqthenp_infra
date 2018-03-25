@@ -1,6 +1,11 @@
 # ifqthenp_infra
 
-## Homework 4. GCP Infrastructure
+| Emoji | Meaning |
+| --- | --- |
+| :large_blue_diamond: | Main task |
+| :large_orange_diamond: | Extra task for self-study |
+| :pushpin: | Useful information |
+| :checkered_flag: | Homework delimeter |
 
 ### SSH aliases
 
