@@ -1,13 +1,13 @@
 # ifqthenp_infra
 
-| Emoji | Meaning |
+| Emoji | Legend |
 | --- | --- |
 | :large_blue_diamond: | Main task |
 | :large_orange_diamond: | Extra task for self-study |
-| :pushpin: | Useful information |
-| :checkered_flag: | Homework delimeter |
+| :information_source: | Useful information |
+| :diamonds: | Homework delimeter |
 
-## :checkered_flag: Homework 4. GCP Infrastructure
+## :diamonds: Homework 4. GCP Infrastructure
 
 ### SSH aliases
 
@@ -40,7 +40,7 @@ sudo openvpn --config /path/to/config.ovpn
 ssh -i ~/.ssh/appuser appuser@< inner private network IP >
 ```
 
-## :checkered_flag: Homework 5. Testapp deploy to GCP
+## :diamonds: Homework 5. Testapp deploy to GCP
 
 ### Testapp connection config
 
@@ -98,7 +98,7 @@ gcloud compute firewall-rules delete default-puma-server
 [4]: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/create
 [5]: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/delete
 
-## :checkered_flag: Homework 6. Creating GCP VM instances with HashiCorp Packer
+## :diamonds: Homework 6. Creating GCP VM instances with HashiCorp Packer
 
 ### Completed tasks
 
@@ -130,7 +130,7 @@ To create new VM instance based on `reddit-full` image with live reddit applicat
 ./config-scripts/create-reddit.sh
 ```
 
-### :pushpin: Useful commands
+### :information_source: Useful commands
 
 Copy and execute script using SSH on remote host. This command is handy for puma server deploy when a new VM instance created with `reddit-base` image.
 
@@ -138,7 +138,7 @@ Copy and execute script using SSH on remote host. This command is handy for puma
 ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 ```
 
-### :pushpin: Useful links
+### :information_source: Useful links
 
 - HashiCorp [Packer tool][6] automates the creation of any type of machine image
 - [Puma systemd][7] configuration instructions
