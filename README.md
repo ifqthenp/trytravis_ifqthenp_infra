@@ -1,6 +1,13 @@
 # ifqthenp_infra
 
-## Homework 4. GCP Infrastructure
+| Emoji | Legend |
+| --- | --- |
+| :large_blue_diamond: | Main task |
+| :large_orange_diamond: | Extra task for self-study |
+| :information_source: | Useful information |
+| :diamonds: | Homework delimeter |
+
+## :diamonds: Homework 4. GCP Infrastructure
 
 ### SSH aliases
 
@@ -33,7 +40,7 @@ sudo openvpn --config /path/to/config.ovpn
 ssh -i ~/.ssh/appuser appuser@< inner private network IP >
 ```
 
-## Homework 5. Testapp deploy to GCP
+## :diamonds: Homework 5. Testapp deploy to GCP
 
 ### Testapp connection config
 
@@ -90,3 +97,55 @@ gcloud compute firewall-rules delete default-puma-server
 [3]: https://cloud.google.com/compute/docs/startupscript#cloud-storage
 [4]: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/create
 [5]: https://cloud.google.com/sdk/gcloud/reference/compute/firewall-rules/delete
+
+## :diamonds: Homework 6. Creating GCP VM instances with HashiCorp Packer
+
+### Completed tasks
+
+:large_blue_diamond: Added packer builder template `ubuntu16.json` parameterized with `variables.json`. The latter has been added to `.gitignore` and `variables.json.example` will be pushed to the repo instead of original file with user variables.
+
+To validate the syntax and configuration of a template use `packer validate` command:
+
+```shell
+packer validate -var-file=variables.json ubuntu16.json
+```
+
+:large_blue_diamond: Extra options for packer builder have been added to `variables.json` file
+
+- disk_type
+- disk_size
+- network
+- tags
+- image_description
+
+:large_orange_diamond: Created "baked" `reddit-full` image ready to be used in immutable infrastructure. The `immutable.json` template includes `puma-reddit.service` provisioning file and `puma-reddit_setup.sh` script enabling application to start as `systemd` unit. To build "baked" image using `packer` image run
+
+```shell
+packer build immutable.json
+```
+
+To create new VM instance based on `reddit-full` image with live reddit application run
+
+```shell
+./config-scripts/create-reddit.sh
+```
+
+### :information_source: Useful commands
+
+Copy and execute script using SSH on remote host. This command is handy for puma server deploy when a new VM instance created with `reddit-base` image.
+
+```shell
+ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
+```
+
+### :information_source: Useful links
+
+- HashiCorp [Packer tool][6] automates the creation of any type of machine image
+- [Puma systemd][7] configuration instructions
+- [Creating and Modifying systemd Unit Files][8] by RedHat
+- [Immutable Infrastructure tutorial][9] by Digital Ocean
+
+[6]: https://www.packer.io/downloads.html
+[7]: https://github.com/puma/puma/blob/master/docs/systemd.md
+[8]: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-managing_services_with_systemd-unit_files
+[9]: https://www.digitalocean.com/community/tutorials/what-is-immutable-infrastructure
