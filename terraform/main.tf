@@ -15,6 +15,10 @@ resource "google_compute_instance" "app" {
     }
   }
 
+  metadata {
+    ssh-keys = "appuser:${file("~/.ssh/appuser.pub")}"
+  }
+
   network_interface {
     network       = "default"
     access_config = {}
