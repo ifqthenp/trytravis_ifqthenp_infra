@@ -25,6 +25,13 @@ resource "google_compute_instance" "app" {
     access_config = {}
   }
 
+  connection {
+    type        = "ssh"
+    user        = "appuser"
+    agent       = false
+    private_key = "${file("~/.ssh/appuser")}"
+  }
+
   provisioner "file" {
     source      = "files/puma.service"
     destination = "/tmp/puma.service"
