@@ -1,7 +1,7 @@
 provider "google" {
   version = "1.9.0"
-  project = "inductive-actor-198011"
-  region  = "europe-west2-a"
+  project = "${var.project}"
+  region  = "${var.region}"
 }
 
 resource "google_compute_instance" "app" {
@@ -12,12 +12,12 @@ resource "google_compute_instance" "app" {
 
   boot_disk {
     initialize_params {
-      image = "reddit-base"
+      image = "${var.disk_image}"
     }
   }
 
   metadata {
-    ssh-keys = "appuser:${file("~/.ssh/appuser.pub")}"
+    ssh-keys = "appuser:${file(var.public_key_path)}"
   }
 
   network_interface {
