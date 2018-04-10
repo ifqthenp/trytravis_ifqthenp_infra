@@ -24,6 +24,15 @@ resource "google_compute_instance" "app" {
     network       = "default"
     access_config = {}
   }
+
+  provisioner "file" {
+    source      = "files/puma-reddit.service"
+    destination = "/tmp/puma.service"
+  }
+
+  provisioner "remote-exec" {
+    script = "files/deploy.sh"
+  }
 }
 
 resource "google_compute_firewall" "firewall_puma" {
