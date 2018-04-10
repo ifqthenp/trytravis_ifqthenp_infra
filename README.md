@@ -149,3 +149,11 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 [7]: https://github.com/puma/puma/blob/master/docs/systemd.md
 [8]: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-managing_services_with_systemd-unit_files
 [9]: https://www.digitalocean.com/community/tutorials/what-is-immutable-infrastructure
+
+## :diamonds: Homework 7. IaC with Terraform
+
+- :large_blue_diamond: Created terraform configuration files `main.tf`, `outputs.tf`, `variables.tf`, and `terraform.tfvars` allowing reddit application to be deployed on GCP instance. Input variables have been defined in `terraform.tfvars` and `terraform.tfvars.example` file has been pushed to the repo.
+
+:information_source: HashiCorp [Terraform][10]
+
+[10]: https://www.terraform.io/docs/index.html
