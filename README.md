@@ -5,7 +5,7 @@
 | :large_blue_diamond: | Main task |
 | :large_orange_diamond: | Extra task for self-study |
 | :information_source: | Useful information |
-| :diamonds: | Homework delimeter |
+| :diamonds: | Homework delimiter |
 
 ## :diamonds: Homework 4. GCP Infrastructure
 
