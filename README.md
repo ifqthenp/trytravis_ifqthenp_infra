@@ -154,6 +154,6 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 
 - :large_blue_diamond: Created terraform configuration files `main.tf`, `outputs.tf`, `variables.tf`, and `terraform.tfvars` allowing reddit application to be deployed on GCP instance. Input variables have been defined in `terraform.tfvars` and `terraform.tfvars.example` file has been pushed to the repo.
 
-:information_source: HashiCorp [Terraform][10]
+:information_source: [HashiCorp Terraform][10] Infrastructure as Code tool
 
 [10]: https://www.terraform.io/docs/index.html
