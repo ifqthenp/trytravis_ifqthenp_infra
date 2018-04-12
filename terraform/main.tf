@@ -73,3 +73,7 @@ resource "google_compute_project_metadata_item" "default" {
   key   = "ssh-keys"
   value = "appuser:${file(var.public_key_path)}"
 }
+
+resource "google_compute_address" "app_ip" {
+  name = "reddit-app-ip"
+}
