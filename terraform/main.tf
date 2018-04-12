@@ -71,5 +71,5 @@ resource "google_compute_firewall" "firewall_ssh" {
 
 resource "google_compute_project_metadata_item" "default" {
   key   = "ssh-keys"
-  value = "appuser1:${file(var.public_key_path)} appuser3:${file(var.public_key_path)}"
+  value = "appuser:${file(var.public_key_path)}"
 }
