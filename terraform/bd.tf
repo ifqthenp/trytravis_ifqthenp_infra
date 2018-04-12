@@ -21,20 +21,16 @@ resource "google_compute_instance" "db" {
   }
 }
 
-resource "google_compute_address" "app_ip" {
-  name = "reddit-app-ip"
-}
-
-resource "google_compute_firewall" "firewall_puma" {
-  name = "allow-puma-default"
+resource "google_compute_firewall" "firewall_mongo" {
+  name = "allow-mongo-default"
 
   network = "default"
 
   allow {
     protocol = "tcp"
-    ports    = ["9292"]
+    ports    = ["27017"]
   }
 
-  source_ranges = ["0.0.0.0/0"]
-  target_tags   = ["reddit-app"]
+  target_tags = ["reddit-db"]
+  source_tags = ["reddit-app"]
 }
