@@ -2,6 +2,6 @@ project = "my_project_ID"
 
 public_key_path = "~/.ssh/appuser.pub"
 
-disk_image = "reddit-base"
-
 private_key_path = "~/.ssh/appuser"
+
+prod_allowed_ips = "8.8.8.8/32"
