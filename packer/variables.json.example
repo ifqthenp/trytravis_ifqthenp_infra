@@ -1,5 +1,5 @@
 {
-    "project_id": null,
+    "project_id": "my-project_id",
     "source_image_family": "ubuntu-1604-lts",
     "machine_type": "g1-small",
     "disk_type": "pd-standard",
