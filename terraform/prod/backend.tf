@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "my_test_10001"
+    bucket = "ifqthenp_tfstate_bucket"
     prefix = "terraform/state"
   }
 }
