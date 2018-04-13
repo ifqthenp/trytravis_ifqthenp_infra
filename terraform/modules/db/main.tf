@@ -1,8 +1,9 @@
 resource "google_compute_instance" "db" {
-  name         = "reddit-db"
-  machine_type = "g1-small"
-  zone         = "${var.zone}"
-  tags         = ["reddit-db"]
+  name                      = "reddit-db"
+  machine_type              = "${var.db_machine_type}"
+  zone                      = "${var.zone}"
+  tags                      = ["reddit-db"]
+  allow_stopping_for_update = true
 
   boot_disk {
     initialize_params {
@@ -19,5 +20,15 @@ resource "google_compute_instance" "db" {
   metadata {
     ssh-keys = "appuser:${file(var.public_key_path)}"
   }
-}
 
+  connection {
+    type        = "ssh"
+    user        = "appuser"
+    agent       = false
+    private_key = "${file(var.private_key_path)}"
+  }
+
+  provisioner "remote-exec" {
+    script = "${path.module}/files/mongo-remote.sh"
+  }
+}
