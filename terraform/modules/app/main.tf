@@ -1,8 +1,9 @@
 resource "google_compute_instance" "app" {
-  name         = "reddit-app"
-  machine_type = "g1-small"
-  zone         = "${var.zone}"
-  tags         = ["reddit-app"]
+  name                      = "reddit-app"
+  machine_type              = "${var.app_machine_type}"
+  zone                      = "${var.zone}"
+  tags                      = ["reddit-app"]
+  allow_stopping_for_update = true
 
   boot_disk {
     initialize_params {
@@ -35,10 +36,18 @@ resource "google_compute_instance" "app" {
   }
 
   provisioner "remote-exec" {
-    script = "${path.module}/files/deploy.sh"
+    script = "${path.module}/files/install_reddit.sh"
   }
 }
 
 resource "google_compute_address" "app_ip" {
   name = "reddit-app-ip"
+}
+
+data "template_file" "puma" {
+  template = "${file("${path.module}/files/puma.service")}"
+
+  vars = {
+    db_address = "${var.db_address}"
+  }
 }
