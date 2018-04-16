@@ -160,3 +160,13 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 
 [10]: https://www.terraform.io/docs/index.html
 [11]: https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys
+
+## :diamonds: Homework 8. Terraform resources, modules, environment, and teamwork
+
+- :large_blue_diamond: Created terraform modularized configuration. The modules are `app`, `db`, and `vpc`
+- :large_blue_diamond: Parameterized modules with custom variables
+- :large_blue_diamond: Created Stage and Prod environments for modules configuration reuse
+- :large_blue_diamond: Created file `storage-bucket.tf` with `storage-bucket` module configuration
+- :large_orange_diamond: Added `backend.tf` config file to store terraform state on Google Cloud Storage platform
+- :large_orange_diamond: Checked that state file is reachable in the bucket from different folders on the machine
+- :large_orange_diamond: Added provisioning files to the modules `app` and `db`

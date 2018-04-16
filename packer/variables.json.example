@@ -1,10 +1,10 @@
 {
-    "project_id": "inductive-actor-198011",
+    "project_id": "my-project_id",
     "source_image_family": "ubuntu-1604-lts",
     "machine_type": "g1-small",
-    "disk_type": "pd-ssd",
+    "disk_type": "pd-standard",
     "disk_size": "10",
     "network": "auto-network-hw6",
-    "tags": "puma-server,mongodb,ruby",
+    "tags": "puma-server",
     "image_description": "Ubuntu 16.04 LTS image with Ruby and MongoDB preinstalled"
 }
