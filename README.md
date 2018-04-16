@@ -171,7 +171,7 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_orange_diamond: Checked that state file is reachable in the bucket from different folders on the machine
 - :large_orange_diamond: Added provisioning files to the modules `app` and `db`
 
-## :diamonds: Homework 9. Terraform resources, modules, environment, and teamwork
+## :diamonds: Homework 9. Introduction to Ansible
 
 ### Completed tasks
 
