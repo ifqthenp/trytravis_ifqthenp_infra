@@ -191,6 +191,6 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 
 ### :information_source: Useful links
 
-[Ansible][12] documentation
+[Ansible][14] documentation
 
-[12]: http://docs.ansible.com/ansible/latest/index.html
+[14]: http://docs.ansible.com/ansible/latest/index.html
