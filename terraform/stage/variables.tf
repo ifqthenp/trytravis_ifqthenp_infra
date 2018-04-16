@@ -39,3 +39,8 @@ variable db_machine_type {
   description = "Machine type for db instance"
   default     = "f1-micro"
 }
+
+variable deploy {
+  description = "If true, reddit application will be deployed to the server"
+  default     = false
+}

@@ -17,3 +17,7 @@ variable db_disk_image {
 variable db_machine_type {
   description = "Machine type for db instance"
 }
+
+variable deploy {
+  description = "If true, reddit application will be deployed to the server"
+}

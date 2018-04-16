@@ -21,3 +21,7 @@ variable app_machine_type {
 variable db_address {
   description = "Address of db server"
 }
+
+variable deploy {
+  description = "If true, reddit application will be deployed to the server"
+}

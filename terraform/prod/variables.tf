@@ -43,3 +43,8 @@ variable db_machine_type {
 variable prod_allowed_ips {
   description = "Allowed IPs range"
 }
+
+variable deploy {
+  description = "If true, reddit application will be deployed to the server"
+  default     = true
+}

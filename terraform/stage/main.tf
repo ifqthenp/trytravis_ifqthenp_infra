@@ -12,6 +12,7 @@ module "app" {
   app_disk_image   = "${var.app_disk_image}"
   app_machine_type = "${var.app_machine_type}"
   db_address       = "${module.db.db_internal_ip}"
+  deploy           = "${var.deploy}"
 }
 
 module "db" {
@@ -21,6 +22,7 @@ module "db" {
   zone             = "${var.zone}"
   db_disk_image    = "${var.db_disk_image}"
   db_machine_type  = "${var.db_machine_type}"
+  deploy           = "${var.deploy}"
 }
 
 module "vpc" {
