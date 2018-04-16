@@ -175,11 +175,11 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 
 ### Completed tasks
 
-:large_blue_diamond: Installed Ansible control machine to execute Ansible tasks from
-:large_blue_diamond: Created inventory files in various formats: `ini`, `yml`, `json`
-:large_blue_diamond: Created `ansible.cfg` config file with default values for the project
-:large_blue_diamond: Created simple ansible playbook to test ansible behaviour for repeating tasks
-:large_orange_diamond: Created simple ansible playbook, described in `clone.yml`, to test ansible behaviour for repeating tasks. The tests have shown that multiple identical commands sent with ansible to the server have the same effect as single command sent to server only once, i.e. ansible module `command` is idempotent.
+- :large_blue_diamond: Installed Ansible control machine to execute Ansible tasks from
+- :large_blue_diamond: Created inventory files in various formats: `ini`, `yml`, `json`
+- :large_blue_diamond: Created `ansible.cfg` config file with default values for the project
+- :large_blue_diamond: Created simple ansible playbook to test ansible behaviour for repeating tasks
+- :large_orange_diamond: Created simple ansible playbook, described in `clone.yml`, to test ansible behaviour for repeating tasks. The tests have shown that multiple identical commands sent with ansible to the server have the same effect as single command sent to server only once, i.e. ansible module `command` is idempotent.
 
 ### :information_source: Useful links
 
