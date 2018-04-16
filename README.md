@@ -171,6 +171,14 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_orange_diamond: Checked that state file is reachable in the bucket from different folders on the machine
 - :large_orange_diamond: Added provisioning files to the modules `app` and `db`
 
+### :information_source: Useful links
+
+[Terraform tips & tricks: loops, if-statements, and gotchas][12]
+[Terraform null-resource for optional provisioning][13]
+
+[12]: https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9
+[13]: https://www.terraform.io/docs/provisioners/null_resource.html
+
 ## :diamonds: Homework 9. Introduction to Ansible
 
 ### Completed tasks
