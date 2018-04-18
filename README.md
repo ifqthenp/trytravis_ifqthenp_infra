@@ -155,8 +155,10 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_blue_diamond: Created terraform configuration files `main.tf`, `outputs.tf`, `variables.tf`, and `terraform.tfvars` allowing reddit application to be deployed on GCP instance. Input variables have been defined in `terraform.tfvars` and `terraform.tfvars.example` file has been pushed to the repo
 - :large_orange_diamond: Added terraform resource to manage GCP SSH keys on project level. The problem encountered with this approach is that terraform will rewrite all previously added keys and `terraform destroy` command will delete all keys from project metadata.
 
-:information_source: [HashiCorp Terraform][10] Infrastructure as Code tool
-:information_source: [Managing SSH keys in GCP Metadata][11] control access to Linux instances by creating SSH keys and editing public SSH key metadata
+### :information_source: Useful links
+
+- :information_source: [HashiCorp Terraform][10] Infrastructure as Code tool
+- :information_source: [Managing SSH keys in GCP Metadata][11] control access to Linux instances by creating SSH keys and editing public SSH key metadata
 
 [10]: https://www.terraform.io/docs/index.html
 [11]: https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys
@@ -173,8 +175,8 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 
 ### :information_source: Useful links
 
-[Terraform tips & tricks: loops, if-statements, and gotchas][12]
-[Terraform null-resource for optional provisioning][13]
+- [Terraform tips & tricks: loops, if-statements, and gotchas][12]
+- [Terraform null-resource for optional provisioning][13]
 
 [12]: https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9
 [13]: https://www.terraform.io/docs/provisioners/null_resource.html
@@ -191,7 +193,7 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 
 ### :information_source: Useful links
 
-[Ansible][14] documentation
+- [Ansible][14] documentation
 
 [14]: http://docs.ansible.com/ansible/latest/index.html
 
@@ -220,8 +222,8 @@ ansible-playbook site.yml
 
 ### :information_source: Useful links
 
-Ansible [Google Cloud Platform Guide][15]
-[Orchestrating GCE Instances with Ansible][16]
+- Ansible [Google Cloud Platform Guide][15]
+- [Orchestrating GCE Instances with Ansible][16]
 
 [15]: https://docs.ansible.com/ansible/2.4/guide_gce.html
 [16]: https://medium.com/vimeo-engineering-blog/orchestrating-gce-instances-with-ansible-d825a33793cd
