@@ -194,3 +194,34 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 [Ansible][14] documentation
 
 [14]: http://docs.ansible.com/ansible/latest/index.html
+
+## :diamonds: Homework 10. Deployment and configuration management with Ansible
+
+### Completed tasks
+
+- :large_blue_diamond: Created several ansible playbooks for Reddit application deployment
+  - `reddit_app_one_play` contains all necessary tasks for deployment in one play separated with tags
+  - `reddit_app_multiple_plays` has the same functionality as playbook above but divided in three plays
+  - `app.yml`, `db.yml`, and `deploy.yml` are three playbooks containing tasks for specific group of hosts. The playbooks imported in `site.yml` in predefined order to deploy Reddit application.
+  - `packer_db.yml` and `packer_app.yml` are the playbooks for packer images provisioning using ansible
+- :large_blue_diamond: Changed provisioning config in `packer/app.json` and `packer/db.json` to replace bash scripts with ansible playbooks
+- :large_orange_diamond: Created configuration for dynamic inventory using `gce.py`
+
+### :information_source: Useful commands
+
+```shell
+ansible all -m ping
+```
+
+```shell
+ansible-playbook site.yml --check
+ansible-playbook site.yml
+```
+
+### :information_source: Useful links
+
+Ansible [Google Cloud Platform Guide][15]
+[Orchestrating GCE Instances with Ansible][16]
+
+[15]: https://docs.ansible.com/ansible/2.4/guide_gce.html
+[16]: https://medium.com/vimeo-engineering-blog/orchestrating-gce-instances-with-ansible-d825a33793cd
