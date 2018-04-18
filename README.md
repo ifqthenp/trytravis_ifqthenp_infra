@@ -4,7 +4,6 @@
 | --- | --- |
 | :large_blue_diamond: | Main task |
 | :large_orange_diamond: | Extra task for self-study |
-| :information_source: | Useful information |
 | :diamonds: | Homework delimiter |
 
 ## :diamonds: Homework 4. GCP Infrastructure
@@ -130,7 +129,7 @@ To create new VM instance based on `reddit-full` image with live reddit applicat
 ./config-scripts/create-reddit.sh
 ```
 
-### :information_source: Useful commands
+### Useful commands
 
 Copy and execute script using SSH on remote host. This command is handy for puma server deploy when a new VM instance created with `reddit-base` image.
 
@@ -138,7 +137,7 @@ Copy and execute script using SSH on remote host. This command is handy for puma
 ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 ```
 
-### :information_source: Useful links
+### Useful links
 
 - HashiCorp [Packer tool][6] automates the creation of any type of machine image
 - [Puma systemd][7] configuration instructions
@@ -155,10 +154,10 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_blue_diamond: Created terraform configuration files `main.tf`, `outputs.tf`, `variables.tf`, and `terraform.tfvars` allowing reddit application to be deployed on GCP instance. Input variables have been defined in `terraform.tfvars` and `terraform.tfvars.example` file has been pushed to the repo
 - :large_orange_diamond: Added terraform resource to manage GCP SSH keys on project level. The problem encountered with this approach is that terraform will rewrite all previously added keys and `terraform destroy` command will delete all keys from project metadata.
 
-### :information_source: Useful links
+### Useful links
 
-- :information_source: [HashiCorp Terraform][10] Infrastructure as Code tool
-- :information_source: [Managing SSH keys in GCP Metadata][11] control access to Linux instances by creating SSH keys and editing public SSH key metadata
+- [HashiCorp Terraform][10] Infrastructure as Code tool
+- [Managing SSH keys in GCP Metadata][11] control access to Linux instances by creating SSH keys and editing public SSH key metadata
 
 [10]: https://www.terraform.io/docs/index.html
 [11]: https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys
@@ -173,7 +172,7 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_orange_diamond: Checked that state file is reachable in the bucket from different folders on the machine
 - :large_orange_diamond: Added provisioning files to the modules `app` and `db`
 
-### :information_source: Useful links
+### Useful links
 
 - [Terraform tips & tricks: loops, if-statements, and gotchas][12]
 - [Terraform null-resource for optional provisioning][13]
@@ -191,7 +190,7 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_blue_diamond: Created simple ansible playbook to test ansible behaviour for repeating tasks
 - :large_orange_diamond: Created simple ansible playbook, described in `clone.yml`, to test ansible behaviour for repeating tasks. The tests have shown that multiple identical commands sent with ansible to the server have the same effect as single command sent to server only once, i.e. ansible module `command` is idempotent.
 
-### :information_source: Useful links
+### Useful links
 
 - [Ansible][14] documentation
 
@@ -209,18 +208,15 @@ ssh appuser@< REMOTE_IP > "bash -s" < ./config-scripts/deploy.sh
 - :large_blue_diamond: Changed provisioning config in `packer/app.json` and `packer/db.json` to replace bash scripts with ansible playbooks
 - :large_orange_diamond: Created configuration for dynamic inventory using `gce.py`
 
-### :information_source: Useful commands
+### Useful commands
 
 ```shell
 ansible all -m ping
-```
-
-```shell
 ansible-playbook site.yml --check
 ansible-playbook site.yml
 ```
 
-### :information_source: Useful links
+### Useful links
 
 - Ansible [Google Cloud Platform Guide][15]
 - [Orchestrating GCE Instances with Ansible][16]
