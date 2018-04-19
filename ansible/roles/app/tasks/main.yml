@@ -1,6 +1,5 @@
 ---
   # tasks file for app
-
 - name: Add unit file for Puma
   copy:
     src: puma.service
