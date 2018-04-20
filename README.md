@@ -225,3 +225,27 @@ ansible-playbook site.yml
 
 [15]: https://docs.ansible.com/ansible/2.4/guide_gce.html
 [16]: https://medium.com/vimeo-engineering-blog/orchestrating-gce-instances-with-ansible-d825a33793cd
+
+## :diamonds: Homework 11. Ansible roles and environments
+
+### Completed tasks
+
+- :large_blue_diamond: Created Ansible `app` and `db` roles with `ansible-galaxy init` command and assigned default variables for roles
+- :large_blue_diamond: Created environments for stage and production with variables defined using Ansible `group_vars`. Added tasks for the `app` and `db` roles to display the environments they belong to
+- :large_blue_diamond: Installed `jdauphant.nginx` community role with `ansible-galaxy` and configured Ansible to allow Reddit application to be reachable on port `80`. The appropriate firewall rule has been added to Terraform configuration
+- :large_blue_diamond: Organised playbooks according to Ansible [best practices][17]
+- :large_blue_diamond: Created `credentials.yml` for each environment and encrypted its content using `ansible-vault`
+- :large_orange_diamond: Configured dynamic inventory for `stage` and `prod` environments using `gce.py`
+- :large_orange_diamond: Configured `trytravis` for local repository testing in Travis CI
+
+[17]: http://docs.ansible.com/ansible/latest/playbooks_best_practices.html
+
+### Useful links
+
+- [Ansible Galaxy][18]
+- [Ansible Vault][19]
+- [trytravis GitHub][20]
+
+[18]: https://galaxy.ansible.com/
+[19]: http://docs.ansible.com/ansible/devel/user_guide/vault.html
+[20]: https://github.com/SethMichaelLarson/trytravis
