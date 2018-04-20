@@ -1,6 +1,6 @@
 {
     "variables" : {
-    "project_id": "inductive-actor-198011",
+    "project_id": null,
     "source_image_family": "ubuntu-1604-lts",
     "machine_type": "g1-small",
     "image_description": "Immutable Ubuntu 16.04 LTS server image with Ruby, MongoDB, and Reddit app preinstalled. Upon creation of new VM instance with this image Puma server will be running on port 9292"
