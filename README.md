@@ -1,6 +1,6 @@
 # ifqthenp_infra
 
-[![Build Status](https://travis-ci.org/ifqthenp/trytravis_ifqthenp_infra.svg?branch=master)](https://travis-ci.org/ifqthenp/trytravis_ifqthenp_infra)
+[![Build Status](https://travis-ci.org/ifqthenp/trytravis_ifqthenp_infra.svg?branch=ansible-3)](https://travis-ci.org/ifqthenp/trytravis_ifqthenp_infra)
 
 | Emoji | Legend |
 | --- | --- |
