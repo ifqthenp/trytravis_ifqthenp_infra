@@ -249,3 +249,16 @@ ansible-playbook site.yml
 [18]: https://galaxy.ansible.com/
 [19]: http://docs.ansible.com/ansible/devel/user_guide/vault.html
 [20]: https://github.com/SethMichaelLarson/trytravis
+
+## :diamonds: Homework 12. Ansible roles and playbooks development and testing
+
+- :large_blue_diamond: Installed Vagrant for local Ansible roles development
+- :large_blue_diamond: Installed Molecule and Testinfra using `virtualenv` for testing Ansible roles
+- :large_blue_diamond: Ansible playbooks have been replaced with roles in Packer templates
+- :large_orange_diamond: Added configuration to Vagrantfile for Nginx to serve application on port `80`
+
+### Useful links
+
+- HashiCorp [Vagrant][21]
+
+[21]: https://www.vagrantup.com/downloads.html
