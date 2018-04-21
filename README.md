@@ -256,3 +256,9 @@ ansible-playbook site.yml
 - :large_blue_diamond: Installed Molecule and Testinfra using `virtualenv` for testing Ansible roles
 - :large_blue_diamond: Ansible playbooks have been replaced with roles in Packer templates
 - :large_orange_diamond: Added configuration to Vagrantfile for Nginx to serve application on port `80`
+
+### Useful links
+
+- HashiCorp [Vagrant][21]
+
+[21]: https://www.vagrantup.com/downloads.html
